@@ -6,13 +6,25 @@ import React from 'react';
 // }
 
 // ES6 way of writing a function
-const Greet = (props) => {
-    console.log(props)
+// const Greet = (props) => {
+//     console.log(props)
+
+//     return (
+//         <div>
+//             <h1>Hello {props.name} a.k.a {props.heroName}</h1>
+//             {props.children}
+//         </div>
+//     )
+// }
+
+// Destructuring props in the function parameters
+const Greet = props => {
+    const {name, heroName} = props
 
     return (
         <div>
-            <h1>Hello {props.name} a.k.a {props.heroName}</h1>
-            {props.children}
+            <h1>Hello {name} a.k.a {heroName}</h1>
+            {/* {props.children} */}
         </div>
     )
 }
