@@ -13,8 +13,8 @@ import UserGreeting from './Components/UserGreeting';
 import NameList from './Components/NameList';
 import Stylesheet from './Components/Stylesheet';
 import Inline from './Components/Inline';
-import './appStyles.css';
-import styles from './appStyles.module.css';
+import './Components/appStyles.css';
+import styles from './Components/appStyles.module.css';
 
 
 function App() {
