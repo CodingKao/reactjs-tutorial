@@ -15,11 +15,13 @@ import Stylesheet from './Components/Stylesheet';
 import Inline from './Components/Inline';
 import './Components/appStyles.css';
 import styles from './Components/appStyles.module.css';
+import Form from './Components/Form';
 
 
 function App() {
   return (
     <div className="App">
+      <Form />
       <h1 className='error'>Error</h1>
       <h1 className={styles.success}>Success</h1>
       <Inline />
