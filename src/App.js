@@ -20,11 +20,13 @@ import LifecycleA from './Components/LifecycleA';
 import FragmentDemo from './Components/FragmentDemo';
 import Table from './Components/Table';
 import ParentComp from './Components/ParentComp';
+import RefsDemo from './Components/RefsDemo';
 
 
 function App() {
   return (
     <div className="App">
+      <RefsDemo />
       <ParentComp />  
       <Table />
       <FragmentDemo />
