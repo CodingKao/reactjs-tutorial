@@ -1,5 +1,9 @@
 // import logo from './logo.svg';
+import React, { Component } from 'react';
+
 import './App.css';
+
+
 import Greet from './Components/Greet';
 import Welcome from './Components/Welcome';
 import Hello from './Components/Hello';
@@ -24,49 +28,66 @@ import RefsDemo from './Components/RefsDemo';
 import FocusInput from './Components/FocusInput';
 import FRParentInput from './Components/FRParentInput';
 import PortalDemo from './Components/PortalDemo';
+import Hero from './Components/Hero';
+import ErrorBoundary from './Components/ErrorBoundary';
 
 
-function App() {
-  return (
-    <div className="App">
-      <PortalDemo />
-      <FRParentInput />
-      <FocusInput />
-      <RefsDemo />
-      <ParentComp />  
-      <Table />
-      <FragmentDemo />
-      <LifecycleA />
-      <Form />
-      <h1 className='error'>Error</h1>
-      <h1 className={styles.success}>Success</h1>
-      <Inline />
-      <Stylesheet primary={true} />
-      <NameList class />
-      <UserGreeting />
-      <ParentComponent />
-      <EventBind />
-      <FunctionClick />
-      <ClassClick />
-      <Counter />
-      <Message />
-      <Greet name="Kao" heroName="TheMan">
-        <p>This is children props</p>
-      </Greet>
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <ErrorBoundary>
+          <Hero heroName="Batman" />
+        </ErrorBoundary>
 
-      <Greet name="Bruce" heroName="Batman">
-        <button>Action</button>
-      </Greet>
+        <ErrorBoundary>
+          <Hero heroName="Superman" />
+        </ErrorBoundary>
 
-      <Greet name="Clark" heroName="Superman" />
+        <ErrorBoundary>
+          <Hero heroName="Joker" /> 
+        </ErrorBoundary>
 
-      <Welcome name="Kao" heroName="TheMan" />
-      <Welcome name="Bruce" heroName="Batman" />
-      <Welcome name="Clark" heroName="Superman" />
+        <PortalDemo />
+        <FRParentInput />
+        <FocusInput />
+        <RefsDemo />
+        <ParentComp />
+        <Table />
+        <FragmentDemo />
+        <LifecycleA />
+        <Form />
+        <h1 className='error'>Error</h1>
+        <h1 className={styles.success}>Success</h1>
+        <Inline />
+        <Stylesheet primary={true} />
+        <NameList class />
+        <UserGreeting />
+        <ParentComponent />
+        <EventBind />
+        <FunctionClick />
+        <ClassClick />
+        <Counter />
+        <Message />
+        <Greet name="Kao" heroName="TheMan">
+          <p>This is children props</p>
+        </Greet>
 
-      <Hello />
-    </div >
-  );
+        <Greet name="Bruce" heroName="Batman">
+          <button>Action</button>
+        </Greet>
+
+        <Greet name="Clark" heroName="Superman" />
+
+        <Welcome name="Kao" heroName="TheMan" />
+        <Welcome name="Bruce" heroName="Batman" />
+        <Welcome name="Clark" heroName="Superman" />
+
+        <Hello />
+      </div >
+    );
+  }
 }
+
 
 export default App;
